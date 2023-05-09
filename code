@@ -1,0 +1,38 @@
+#include <iostream>
+
+class Bicycle {
+private:
+    int gear;
+
+public:
+    Bicycle() {
+        gear = 1;  // Initial gear is 1
+    }
+
+    void changeGear(int newGear) {
+        gear = newGear;
+    }
+
+    void printGear() {
+        std::cout << "Current gear: " << gear << std::endl;
+    }
+};
+
+int main() {
+    Bicycle bike;
+
+    // Initial gear
+    bike.printGear();
+
+    // Change gears
+    bike.changeGear(2);
+    bike.printGear();
+
+    bike.changeGear(3);
+    bike.printGear();
+
+    bike.changeGear(1);
+    bike.printGear();
+
+    return 0;
+}
